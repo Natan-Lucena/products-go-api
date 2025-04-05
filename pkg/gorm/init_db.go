@@ -6,7 +6,7 @@ import (
 
 	models "github.com/Natan-Lucena/products-api/internal/infraestructure/persistence"
 	"github.com/joho/godotenv"
-	"gorm.io/driver/mysql"
+	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
@@ -18,7 +18,7 @@ func InitDB() (*gorm.DB, error) {
 	key := "DB_URL"
 	dsn := os.Getenv(key)
 
-	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		return nil, err
 	}
