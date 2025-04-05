@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "github.com/Natan-Lucena/products-api/proto/user";
+
+// Definição do serviço de usuário
+service UserService {
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+}
+
+// Mensagem para requisição de usuário
+message GetUserRequest {
+  string user_id = 1;
+}
+
+// Mensagem para resposta de usuário
+message GetUserResponse {
+  User user = 1;
+}
+
+// Definição do usuário
+message User {
+  string id = 1;
+  string email = 2;
+  string name = 3;
+  string role = 4; 
+  string tax_id = 5;
+  string profile_picture_url = 6;
+  string created_at = 7;
+}
