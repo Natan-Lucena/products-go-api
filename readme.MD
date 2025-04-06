@@ -43,12 +43,13 @@ To run the **products-api**, follow these steps:
 
    Make sure the `users-api` service is up and running (along with its PostgreSQL shards). Inside its project directory, run:
 
-   ```bash
-    $ docker-compose up -d
+2. **Start the `products-api` service**
 
-    $ go mod download
+```bash
+   $ docker-compose up -d
 
+   $ go mod download
 
-    $ go run cmd/rest/main.go
+   $ go run cmd/rest/main.go
 
-   ```
+```
