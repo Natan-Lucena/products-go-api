@@ -9,7 +9,6 @@ This project is a products API built with Go, following a clean architecture app
 - **gRPC** — efficient communication between microservices
 - **Protocol Buffers (Protobuf)** — defines gRPC contracts
 - **PostgreSQL** — relational database
-- **Prisma** — ORM used in the user microservice
 - **Docker (optional)** — for running dependencies (DB, etc.)
 - **JWT (JSON Web Tokens)** — for service-to-service authentication
 
